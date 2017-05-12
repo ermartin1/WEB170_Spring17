@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 
 
-    
+<!-- Begin 404 Text -->    
 <div id ="content">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h2>
-<?php the_content(); ?>
-<?php endwhile; endif; ?>
-<?php if (is_404()) {echo 'error error danger Will Roger page not found!'; } ?>
-<small>index.php</small>
+<h2>404 Error</h2>
+	<p>Dude... I don't know what to tell you.</p>
+    <small>404.php</small>
 </div> 
+ 
+<!-- End 404 Text -->
+
     
     
 

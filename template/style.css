@@ -22,7 +22,7 @@ background-attachment:fixed;
 background-position:center top;
 }
 
-.top  {
+.top  { /* logo location  */
 	width:80%;
 	max-width:1100px;
 	margin:0 auto;
@@ -31,12 +31,13 @@ background-position:center top;
 
 
 /*div#wrapper {
-/*width:940px; */
-/*max-width:1100px;
-/*margin:20px auto 20px auto;
-/*overflow:hidden;
-/*background:rgb(255, 247, 230); */
+width:940px; 
+max-width:1100px;
+margin:20px auto 20px auto;
+overflow:hidden;
+background:rgb(255, 247, 230); 
 } 
+*/
 
 
 nav {
@@ -47,8 +48,8 @@ background:#bbbb77;
 
 nav ul{
 margin:0 auto;
-width:90%;
-
+width:100%;
+overflow:hidden; /*prevents collapsing*/
 }
 
 nav li{
@@ -70,17 +71,18 @@ text-align:center;
 }
 
 
-nav li:nth-child(1),
 nav li:nth-child(2),
 nav li:nth-child(4),
-nav li:nth-child(6){
-	width:16%;
+nav li:nth-child(6),
+nav li:nth-child(7){
+	width:14%;
 		
 }
 
+nav li:nth-child(1),
 nav li:nth-child(3),
 nav li:nth-child(5){
-width:14%;
+width:12%;
 }
 
 
@@ -90,6 +92,17 @@ color:white;
 
 }
 
+nav ul li.current_page_item a {
+    color: goldenrod;
+}
+
+nav ul li.current_page_parent a{
+    color: goldenrod;
+}
+
+ul.children {
+    display: none;
+}
 
 li a, .droptbtn{
 	display:inline-block;
@@ -114,11 +127,21 @@ background:rgb(255, 247, 230);
 }
 
 
-main {
-/*width:500px;
+#container{
+width:960px;
+max-width:1100px;
+margin:0 auto;
+padding: 20px;
+overflow:hidden;
+background:rgb(255, 247, 230);
+border-radius: 10px;
+}
+
+/*main {
+width:500px;
 padding:0 20px;
-padding-left:50px;*/
-width:53.19148%;
+padding-left:50px;
+width:65.95744%;
 padding:0 2.12765%;
 padding-left:5.31214%;
 float:left;
@@ -126,22 +149,35 @@ margin-bottom:30px;
 margin-right:20px;
 color:#4d2600;
 margin-top:10px;
+} */
 
+#content{
+width:620px;
+float:left;
+padding-right: 20px;  
 }
+
+#sidebar{
+width: 300px;
+float:right;
+ 
+}
+
 
 header{
-/*width:600px;*/
-width:63.82978%;
-padding:1.5%;
-height:300px;
-margin:auto;
-display:block;
+/*width:600px;
+width:63.82978%; 
+padding:1.5%; old css*/
+max-width: 980px;
+padding-bottom:10px;
+margin:0 auto;
+display:block; 
 }
 
 
-.box1{
+/*.box1{
 /*width:400px;
-padding:20px;*/
+padding:20px;
 width:42.55319%;
 padding:2.12765%;
 margin-bottom:20px;
@@ -150,9 +186,9 @@ color:#4d2600;
 border:1px #4d2600;
 border-radius:20px;
 float:left;
-}
-
-.box1 li{
+} */ 
+ 
+/*.box1 li{
 list-style-type:none;
 text-align:left;
 line-height:35px;
@@ -161,11 +197,11 @@ line-height:35px;
 .box1 li a{
 text-decoration:none;
 color:#4d2600;
-}
+} */
 
-.box2{
+/*.box2{
 /*width:350px;
-padding:20px;*/
+padding:20px;
 width:35.23404%;
 padding:2.12765%;
 margin-right:20px;
@@ -175,11 +211,11 @@ border:1px #4d2600;
 border-radius:20px;
 float:right;
 background:red;
-}
+} */
 
-.box3{
+/*.box3{
 /*width:400px;
-padding:20px;*/
+padding:20px;
 width:42.55319%;
 padding:2.12765%;
 margin-right:20px;
@@ -189,11 +225,11 @@ border:1px #4d2600;
 border-radius:20px;
 float:left;
 
-}
+} */
 
-.box4{
+/*.box4{
 /*width:400px;
-padding:20px;*/
+padding:20px;
 width:42.55319%;
 padding:2.12765%;
 margin-right:20px;
@@ -203,11 +239,11 @@ border:1px #4d2600;
 border-radius:20px;
 float:right;
 
-}
+} */
 
-.box5{
+/*.box5{
 /*width:750px;
-padding:20px;*/
+padding:20px;
 width:70.78723%;
 padding:2.12765%;
 padding-right:10%;
@@ -216,18 +252,18 @@ margin-bottom:20px;
 color:#4d2600;
 border-radius:20px;
 
-}
+}*/
 
-.box6{
-/*padding:20px;*/
+/*.box6{
+/*padding:20px;
 width:37.23404%;
 padding:2.12765%;
 margin-bottom:20px;
 float:left;
-}
+} */
 
-.box7{
-/*padding:20px;*/
+/*.box7{
+padding:20px;
 width:30%;
 padding:2.12765%;
 margin-bottom:20px;
@@ -236,19 +272,13 @@ border-radius:25px;
 float:left;
 margin-left:325px;
 }
-
-#container{
-	position:relative;
-	overflow:hidden;
-	clear:both;
-	margin-bottom:50px;
-		
-}
+not using box */
 
 
-aside {
-/*width:350px;*/
-width:35.23404%;
+
+/*aside {
+/*width:350px;
+/*width:35.23404%;
 padding:1.12765%;
 padding-top:10%;
 color:#4d2600;
@@ -256,11 +286,13 @@ border:1px #4d2600;
 border-radius:20px;	
 float:right;
 
-}
+} */
 
 
 footer {
-height:75px;
+width:100%;
+margin: 0 auto;
+height:50px;
 clear:both;
 background-color:#bbbb77;
 color:#1a0d00;
@@ -268,10 +300,10 @@ overflow:hidden;
 }
 
 #copyright{
-	height:50px;
-	line-height:50px;
-	clear:both;
-margin-top:15px;
+height:50px;
+line-height:50px;
+clear:both;
+margin-bottom:20px;
 	
 }
 

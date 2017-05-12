@@ -8,7 +8,7 @@
 <?php the_content(); ?>
 <?php endwhile; endif; ?>
 <?php if (is_404()) {echo 'error error danger Will Roger page not found!'; } ?>
-<small>index.php</small>
+<small>page.php</small>
 </div> 
     
     
