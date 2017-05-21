@@ -98,13 +98,10 @@
 
 <!-- end nav -->
 
- 
-    
-
     
 <!-- start sub nav -->
 <?php if (!(is_page())): ?> <!--on a page -->
-<h2 class="sub-navigation-title"><?php echo get_the_title($post->post_parent); ?></h2>   
+<!--<h2 class="sub-navigation-title"><?php echo get_the_title($post->post_parent); ?></h2>--> 
 <ul class="sub-navigation-items"><?php if ($post->post_parent) { wp_list_pages(array('child_of' => $post->post_parent, 'title_li' => (''))); 
  } 
     else { 
@@ -114,9 +111,9 @@
     
 <?php endif; ?>
     
-<?php if (!(is_page())): ?>
+  <?php if (!(is_page())): ?>
     <h2 class="sub-navigation-title">News &amp; Events</h2>
-    <ul class="sub-navigation-items"><?php wp_list_categories(array('title_li' => (''))); ?></ul>
+ <!-- <ul class="sub-navigation-items"><?php wp_list_categories(array('title_li' => (''))); ?></ul> -->
 <?php endif; ?>
     
 <!-- end sub nav -->

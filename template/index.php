@@ -1,18 +1,30 @@
 <?php get_header(); ?>
 
 
-    
+ <!-- Begin content-->   
 <div id ="content">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>  <!--loop starts here -->
+    
+    <article class="post-excerpt"> 
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h2>
-<?php the_content(); ?>
-<?php endwhile; endif; ?>
+        <small>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?> in <?php the_category(' | '); ?>.</small>
+        
+    <a href="<?php the_permalink(); //link to the page or posting ?>"> 
+<?php //the_excerpt(); blog post excerpt// ?> 
+        <?php the_post_thumbnail('thumbnail'); ?> </a>
+       
+<p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More&nbsp;&raquo;</a></p>
+    </article>     
+        
+    <?php endwhile; endif; ?>
+    
 <?php if (is_404()) {echo 'error error danger Will Roger page not found!'; } ?>
-<small>index.php</small>
+    
+    <small>index.php</small>
 </div> 
     
     
-
+ <!-- end content--> 
     
 <?php get_sidebar(); ?>
 		

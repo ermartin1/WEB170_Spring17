@@ -58,7 +58,7 @@ text-align:left;
 float:left;
 text-decoration:none;
 list-style-type:none;
-width:16.66%;
+width:12.66%;
 }
 
 nav li a{
@@ -67,22 +67,41 @@ list-style-type:none;
 display:block;
 color:black;
 text-align:center;
-
+margin:0px;
+padding: 0px 25px;
+text-align: center;
 }
 
+    nav li a:hover, nav ul li:hover a{
+        background:#4d2600;
+        color:white;
+        text-decoration: none;  
+    }
 
-nav li:nth-child(2),
-nav li:nth-child(4),
-nav li:nth-child(6),
-nav li:nth-child(7){
-	width:14%;
-		
+nav li ul{
+background:#bbbb77;
+display: none;
+height: auto;
+padding: 0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
 }
+
 
 nav li:nth-child(1),
 nav li:nth-child(3),
-nav li:nth-child(5){
-width:12%;
+nav li:nth-child(5),
+nav li:nth-child(6){
+	width:16%;
+
+}
+
+nav li:nth-child(2),
+nav li:nth-child(4){
+width:14%;
 }
 
 
@@ -90,6 +109,42 @@ nav a:hover{
 background:#4d2600;
 color:white;
 
+}
+
+nav li:hover ul{
+    display: block;
+}
+
+nav li li{
+    display: block;
+    float: none;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+}
+
+nav li:hover li a{
+    background: none;
+}
+
+nav li ul a{
+    display: block;
+    height:50px;
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+}
+
+    nav li ul a:hover, nav li ul li:hover a{
+        background:#4d2600;
+        border: 0px;
+        color:white;
+        text-decoration: none;
+        width:200px;
+        }
+
+nav p{
+    clear:center;
 }
 
 nav ul li.current_page_item a {
@@ -100,32 +155,38 @@ nav ul li.current_page_parent a{
     color: goldenrod;
 }
 
+nav ul li.current_page_children a{
+    color: goldenrod; 
+}
+
 ul.children {
     display: none;
 }
 
-li a, .droptbtn{
+
+
+/*
+nav li a, .droptbtn{
 	display:inline-block;
 	text-align:center;
-	
 }
 
-li.dropdown{
+nav li.dropdown{
 display:inline-block;
 }
 
-.dropdown:hover .dropdown-content{
+nav .dropdown:hover .dropdown-content{
 display:block;
 background:rgb(255, 247, 230);  
 }
 
-.dropdown-content{
+nav .dropdown-content{
 	display:none;
 	position:absolute;
 	float:right;
 	padding:10px;
 }
-
+*/
 
 #container{ /* or middle */
 width:960px;
@@ -144,12 +205,19 @@ border-radius: 10px;
 #widgets section.widget-item{
     width: 300px;
     float:left;
-    margin-right: 10px;
+    margin-right: 30px;
+    text-decoration: none;
 }
 
 #widgets section.widget-item:last-child {
     margin-right: 0px; 
 }
+
+#widgets section.widget-item ul{
+    text-decoration:none;
+    list-style-type:none;
+}
+
 
 /*main {
 width:900px;
@@ -162,12 +230,48 @@ margin-right: 20px;
 width:620px;
 float:left;
 padding-right: 20px;  
+
 }
 
 #content small{
     display: block;
-    
 }
+
+#content input, #content select, #content textarea{
+    display: block;
+    margin-bottom: 10px;
+}
+
+#content article.post-excerpt {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#content img{
+    border:1px solid #4d2600;
+    padding: 4px;
+}
+
+#content img.featured{
+    margin-bottom: 10px;
+}
+
+
+/*---post thumbnails--*/
+
+#content imp.wp-post-image{}
+
+#content img.attachment-thumbnail{
+    float: left;
+    margin: 4px 20px 0;
+}
+
+#content img.attachment-medium{}
+
+#content img.attachment-large{}
+
+#content img.attachment-full{}
+
 
 #sidebar{
 width: 300px;
@@ -505,7 +609,7 @@ padding:10px;
 p{
 	line-height:1.5em;
 	margin-bottom:1.5em;
-	font-size:1em;
+	font-size:16px;
 	font-family:'sinanova-regularregular';
 	color:#1a0d00;
 	text-align:left;
@@ -552,14 +656,14 @@ color:#1a0d00;
 }
 
 h3 {
-font-size:2em;
+font-size:1.5em;
 font-family:'sagonabook_demo';
 color:#1a0d00;
 text-align:center;
 }
 
 h4 {
-font-size:1.5em;
+font-size:1em;
 font-family:'sagonabook_demo';
 color:#1a0d00;
 text-align:left;
