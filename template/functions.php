@@ -15,12 +15,13 @@ register_nav_menus(array('main-menu' => 'Main Menu', 'footer-menu' => 'Footer Me
 
 
 //register my sidebar
-register_sidebar(array(
+register_sidebars(2, array(
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h2>',
     'after_title' => '</h2>',
 ));
+//to give a sidbar a name, place after after_widget register_sidebar(array('name =>'type in name'));
 
 //create post thumbnails
 add_theme_support('post-thumbnails');

@@ -272,12 +272,33 @@ padding-right: 20px;
 
 #content img.attachment-full{}
 
+#pull-quote {
+			border-top: 1px solid #4d2600;
+            margin-bottom: 15px;
+			padding: 10px 0;
+			font-style: italic;
+            font-weight: bold;
+			color: #4d2600;
+		}
+
+#calendar-2{
+    margin-top: 15px;
+    font-weight: bold;
+    font-style: normal;
+    color: #4d2600;
+    text-align: center;
+}
+
+
 
 #sidebar{
 width: 300px;
 float:right;
 }
 
+#sidebar div.widget {
+ margin-bottom: 20px;   
+}
 
 
 header{

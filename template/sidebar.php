@@ -1,5 +1,9 @@
  <!-- start sidebar -->
 <div id="sidebar">
+<!--start sub nav-->
+<div id="sub-navigation" class="widget">
+    
+    
 <h2><?php if(is_page()) {echo get_the_title($post->post_parent); } ?></h2>
 <ul>
 <?php 
@@ -22,7 +26,28 @@ if(is_page()) {  //on a page
     
 } // end on page
 ?>
-</ul>       
+</ul> 
+</div> <!--end sub nav-->
+    
+<!-- pull quote start-->  <!-- if custom quote exists, get mark up-->
+<?php if (get_post_meta($post->ID, 'Quote', true)) :  ?>  
+<div id="pull-quote" class="widget">
+
+    <blockquote><?php echo get_post_meta($post->ID, 'Quote', true); ?></blockquote>    
+
+<?php endif; ?>
+
+<!-- pull quote end-->
+    
+    
+<!-- dynamic sidebar start-->
+
+<?php dynamic_sidebar(1); //calls my widgets?>
+    
+<?php dynamic_sidebar(2); //calls my widgets?>
+    
+<!-- dynamic sidebar end-->
+
 </div>  
 
 <!-- end sidebar --> 
